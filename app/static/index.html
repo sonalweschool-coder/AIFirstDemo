@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Calculator Agent</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="workspace" aria-label="Calculator agent">
+        <div class="intro">
+          <p class="eyebrow">Agentic AI Demo</p>
+          <h1>Calculator Agent</h1>
+          <p>Ask a math question and the agent will identify the task, choose the calculator tool, execute it, and return the answer.</p>
+        </div>
+
+        <form id="calculator-form" class="composer">
+          <label for="prompt">User input</label>
+          <div class="input-row">
+            <input id="prompt" name="prompt" type="text" value="calculate 20% of 8500" autocomplete="off" />
+            <button type="submit">Run Agent</button>
+          </div>
+        </form>
+
+        <section class="result-grid" aria-live="polite">
+          <article class="panel">
+            <span>Agent reasoning</span>
+            <strong id="reasoning">Waiting for a request.</strong>
+          </article>
+          <article class="panel">
+            <span>Tool</span>
+            <strong id="tool">-</strong>
+          </article>
+          <article class="panel answer-panel">
+            <span>Answer</span>
+            <strong id="answer">-</strong>
+          </article>
+        </section>
+      </section>
+    </main>
+    <script src="/static/app.js"></script>
+  </body>
+</html>
